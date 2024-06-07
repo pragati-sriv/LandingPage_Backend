@@ -1,0 +1,39 @@
+Base URL
+http://localhost:8001
+
+
+
+Instruction given
+1. `GET /tasks`: Retrieve a list of all tasks.
+2. `GET /tasks/:id`: Retrieve a specific task by ID.
+3. `POST /tasks`: Create a new task.
+4. `PUT /tasks/:id`: Update an existing task by ID.
+5. `DELETE /tasks/:id`: Delete a task by I
+
+
+Status code 
+Status Codes:
+200: Success
+404: Task not found
+Status Codes:
+201: Created
+400: Bad request (missing fields)
+
+
+Algorithm
+Express.js for Routing and Middleware:
+
+Chosen for its simplicity and ease of use for setting up RESTful APIs.
+Middleware (express.json() and express.urlencoded()) used 
+
+Used an array (tasks) to store task data in memory.   // Basically i use MOCK_DATA.json to perform CRUD operation
+
+
+GET endpoints for retrieving tasks (all or by ID).
+POST endpoint for creating new tasks with validation for required fields.
+PUT endpoint for updating existing tasks with validation for required fields and task existence check.
+DELETE endpoint for removing tasks by ID with existence check.
+File System Operations:
+
+Used fs.writeFile to persist changes to MOCK_DATA.json after POST, PUT, and DELETE operations.
+ JSON (JSON.stringify(tasks, null, 2)) for readability in the data file.
